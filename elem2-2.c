@@ -11,8 +11,8 @@ int main() {
   if (n==1) jest_pierwsza=1;
   else {
   i=2;
-  while (n%i){i++;}
-  if (i<n) jest_pierwsza=0;
+  while ((n%i)&&(i*i<n)){i++;}
+  if (i*i<=n) jest_pierwsza=0;
   else jest_pierwsza=1;
   }
   printf("Podana liczba '%d' jest %s\n",
